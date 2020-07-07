@@ -1,10 +1,6 @@
 import 'react-native-gesture-handler';
-import React from 'react';
-import {View, Text} from 'react-native';
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator, TransitionPresets} from 'react-navigation-stack';
-import {fromLeft} from 'react-navigation-transitions';
-import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
 import LoginScreen from '../screens/login';
 import WelcomeScreen from '../screens/welcome';
 import RegistrationScreen from '../screens/registration';
