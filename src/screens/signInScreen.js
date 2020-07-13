@@ -8,7 +8,8 @@ import {
   TextInput,
 } from 'react-native';
 import * as firebase from 'firebase';
-const LoginScreen = (props) => {
+
+const SignInScreen = (props) => {
   // const [email, setEmail] = useState('');
   // const [password, setPassword] = useState('');
   // const [errorMessage, setErrorMessage] = useState(null);
@@ -26,20 +27,28 @@ const LoginScreen = (props) => {
           source={require('../assets/images/icon.png')}
           style={styles.logoStyle}
         />
-        <Text style={styles.welcomeText}>Welcome To Fine</Text>
-        <Text style={styles.stayText}>Stay connected and express yourself</Text>
+        <Text style={styles.stayText}>Please fill in the credentials</Text>
       </View>
 
       <View style={styles.loginbtnStyle}>
+        <TextInput
+          style={styles.textInputStyle}
+          placeholder="email address"
+          placeholderTextColor="#9B9B9B"></TextInput>
+        <TextInput
+          style={styles.textInputStyle}
+          placeholder="password"
+          secureTextEntry
+          placeholderTextColor="#9B9B9B"></TextInput>
         <TouchableOpacity
           style={styles.btnSignIn}
-          onPress={() => props.navigation.navigate('Welcome')}>
-          <Text style={styles.btnSignInText}> Sign Up</Text>
+          onPress={() => props.navigation.navigate('Main')}>
+          <Text style={styles.btnSignInText}> Login</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.btnGetStarted}
-          onPress={() => props.navigation.navigate('Login')}>
-          <Text style={styles.btnSignInText}> Login </Text>
+          onPress={() => props.navigation.navigate('Welcome')}>
+          <Text style={styles.btnSignInText}> sign up </Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -55,6 +64,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom: 80,
   },
   loginImage: {
     backgroundColor: '#121212',
@@ -75,8 +85,8 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 22,
     fontFamily: 'Muli-Regular',
-    width: '90%',
-    paddingTop: 25,
+    width: '70%',
+    paddingTop: 100,
   },
 
   btnSignIn: {
@@ -104,7 +114,7 @@ const styles = StyleSheet.create({
     height: 60,
   },
   textInputStyle: {
-    height: 50,
+    height: 60,
     width: 350,
     borderColor: '#939393',
     borderWidth: 0.5,
@@ -161,4 +171,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginScreen;
+export default SignInScreen;

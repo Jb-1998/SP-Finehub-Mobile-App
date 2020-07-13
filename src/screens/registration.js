@@ -20,11 +20,7 @@ const RegistrationScreen = (props) => {
       </Text>
       <TextInput
         style={styles.textInputStyle}
-        placeholder="First Name"
-        placeholderTextColor="#9B9B9B"></TextInput>
-      <TextInput
-        style={styles.textInputStyle}
-        placeholder="Last Name"
+        placeholder="Full Name"
         placeholderTextColor="#9B9B9B"></TextInput>
       <TextInput
         style={styles.textInputStyle}
@@ -100,8 +96,8 @@ const styles = StyleSheet.create({
     color: 'white',
     fontFamily: 'Muli-Light',
     fontSize: 15,
-    paddingLeft: 28,
-    paddingRight: 28,
+    paddingLeft: 25,
+    paddingRight: 25,
     paddingTop: 20,
     marginLeft: 20,
     marginRight: 20,
